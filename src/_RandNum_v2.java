@@ -1,10 +1,8 @@
 //Projekt2: Odgadywanie liczby wylosowanej przez komputer;
-//Błąd w projekcie: wywoluje funkcje w warunkach. Jesli warunek nie zostanie spelniony to przechodzi do
-//  kolejnego warunku, gdzie funkcja znowu jest wywolywana.
 
 import java.util.Random;
 import java.util.Scanner;
-public class _RandNum  //nazwa klasy glownej musi zgadzac sie z nazwa pliku, inaczej nie zadziala
+public class _RandNum_v2  //nazwa klasy glownej musi zgadzac sie z nazwa pliku, inaczej nie zadziala
 { 
     public static void main(String[] args) //dla petli glownej musi byc main
     {
@@ -17,13 +15,13 @@ public class _RandNum  //nazwa klasy glownej musi zgadzac sie z nazwa pliku, ina
         while (!wasNumberGuessed)
         {
             System.out.println("Podaj liczbe: ");
-            kutas.nextInt();
+            int number = kutas.nextInt();
             
-            if (kutas.nextInt() < numberToGuess)
+            if (number < numberToGuess)
             {
                 System.out.println("Cyfra za mala, sprobuj ponownie.");
             }
-            else if (kutas.nextInt() > numberToGuess)
+            else if (number > numberToGuess)
                         {
                 System.out.println("Cyfra za duza, sprobuj ponownie.");
             }
